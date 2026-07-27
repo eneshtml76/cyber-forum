@@ -1,0 +1,358 @@
+/* Theme Styles */
+body.dark-theme {
+    background-color: #000000;
+}
+body.dark-theme .title, body.dark-theme .forum-container h2 {
+    color: #3fe087;
+}
+body.dark-theme .post-card {
+    background-color: #111;
+    border: 1px solid #3fe08733;
+    color: #e0e0e0;
+}
+body.dark-theme .single-comment {
+    background: #1a1a1a;
+    border-left: 2px solid #3fe087;
+}
+
+body.light-theme {
+    background-color: #f4f6f9;
+}
+body.light-theme .title, body.light-theme .forum-container h2 {
+    color: #1e293b;
+}
+body.light-theme .post-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #333333;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+body.light-theme .single-comment {
+    background: #f8fafc;
+    border-left: 2px solid #2563eb;
+}
+
+/* Base Document Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: background-color 0.4s ease;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Forum Feed Container */
+.forum-container {
+    max-width: 600px;
+    margin: 40px auto 120px auto;
+    padding: 0 20px;
+}
+
+.forum-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Post Card Designs */
+.post-card {
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateX(4px);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.post-header .author {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+body.dark-theme .post-header .author {
+    color: #3fe087;
+}
+
+.post-header .date {
+    color: #888;
+}
+
+.post-content {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* Like, Dislike and Comment Buttons UI */
+.post-actions {
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    padding-top: 10px;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background: rgba(128, 128, 128, 0.1);
+    color: #2563eb;
+}
+
+body.dark-theme .action-btn:hover {
+    color: #3fe087;
+}
+
+/* Dynamic Inline Comment Form UI (Updated for Name field) */
+.comment-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+    background: rgba(128, 128, 128, 0.05);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.comment-input-container input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.comment-input-container .form-row {
+    display: flex;
+    gap: 6px;
+}
+
+.comment-input-container button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+body.dark-theme .comment-input-container button {
+    background-color: #3fe087;
+    color: #000;
+}
+
+/* Comments Display Style */
+.comments-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.single-comment {
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+/* Floating Navigation Buttons */
+.btn {
+    background-color: #3fe08771;
+    color: #f0f0f0e7;
+    border: 1px solid #3fe08771;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 90;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #1f9b1b85;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(63, 224, 135, 0.4); 
+}
+
+.btn1 {
+    background-color: #8b4343;
+    color: #f0f0f0e7;
+    border: 1px solid #ff0000;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 90;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background-color: #5f0101;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4); 
+}
+
+#registerBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.2s, transform 0.2s;
+    z-index: 100;
+}
+
+#registerBtn:hover {
+    background-color: #1d4ed8;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Modals Layout */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    font-family: sans-serif;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-box h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.info-text {
+    color: #666; 
+    font-size: 11px; 
+    display: block; 
+    margin-top: 4px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.submit-btn:hover {
+    filter: brightness(1.2);
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}

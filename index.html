@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberForum Website</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <h1 class="title" id="pageTitle">CyberForum</h1>
+    
+    <!-- Central Forum Feed Section -->
+    <main class="forum-container">
+        <h2>Active Discussions</h2>
+        <div class="feed" id="forumFeed">
+            
+            <!-- Default Thread 1 -->
+            <div class="post-card">
+                <div class="post-header">
+                    <span class="author">Admin_Cyber</span>
+                    <span class="date">Just now</span>
+                </div>
+                <p class="post-content">Welcome to the newly designed CyberForum! Feel free to create an account or leave us a live message using the buttons below.</p>
+                
+                <div class="post-actions">
+                    <button class="action-btn like-btn">👍 <span>0</span></button>
+                    <button class="action-btn dislike-btn">👎 <span>0</span></button>
+                    <button class="action-btn comment-btn">💬 Comment</button>
+                </div>
+
+                <!-- Live Comments Section Area -->
+                <div class="comments-section"></div>
+            </div>
+
+            <!-- Default Thread 2 -->
+            <div class="post-card">
+                <div class="post-header">
+                    <span class="author">Alex_Dev</span>
+                    <span class="date">2 hours ago</span>
+                </div>
+                <p class="post-content">The live theme switching feature looks incredibly smooth on this dark background. Loving the green accent color!</p>
+                
+                <div class="post-actions">
+                    <button class="action-btn like-btn">👍 <span>3</span></button>
+                    <button class="action-btn dislike-btn">👎 <span>0</span></button>
+                    <button class="action-btn comment-btn">💬 Comment</button>
+                </div>
+
+                <!-- Live Comments Section Area -->
+                <div class="comments-section"></div>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Floating Bottom Navigation -->
+    <div class="ana-kutu">
+        <button class="btn" id="themeToggleBtn">Toggle Theme</button>
+        <button class="btn1" id="messageBtn">Post Message</button>
+    </div>                                                                      
+    
+    <button type="button" id="registerBtn">Create Account</button>
+
+    <!-- Registration Modal -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal-box">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Create Account</h2>
+            
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="example@mail.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required 
+                           pattern="(?=.*\d)(?=.*[A-Z]).{8,}" 
+                           placeholder="••••••••">
+                    <small class="info-text">
+                        Must be at least 8 characters with 1 uppercase letter and 1 number.
+                    </small>
+                    <div class="error-msg" id="passwordError">Password does not meet requirements!</div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Message Posting Modal -->
+    <div class="modal-overlay" id="messageModal">
+        <div class="modal-box">
+            <span class="close-btn" id="closeMessageModal">&times;</span>
+            <h2>Create New Post</h2>
+            <form id="messageForm">
+                <div class="input-group">
+                    <label for="visitorName">Username</label>
+                    <input type="text" id="visitorName" required placeholder="Your alias">
+                </div>
+                <div class="input-group">
+                    <label for="visitorText">What's on your mind?</label>
+                    <textarea id="visitorText" rows="4" required placeholder="Type your forum post here..." style="width:100%; border: 1px solid #ccc; border-radius:5px; padding:10px; box-sizing:border-box; font-family:sans-serif; resize: none;"></textarea>
+                </div>
+                <button type="submit" class="submit-btn" style="background-color: #8b4343;">Publish Post</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
